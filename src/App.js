@@ -4,7 +4,7 @@ import HomePage from './views/screens/HomePage';
 import DiscoverPage from './views/screens/DiscoverPage';
 import UserPage from './views/screens/UserPage';
 import VoucherPage from './views/screens/VoucherPage';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 let pages = [
   <HomePage></HomePage>,
