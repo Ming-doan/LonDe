@@ -11,9 +11,6 @@ function DiscoverPage() {
             </div>
 
             <Spacer space={20}></Spacer>
-
-
-
         </div>
     )
 }

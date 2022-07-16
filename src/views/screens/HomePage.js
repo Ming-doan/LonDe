@@ -5,12 +5,13 @@ import Spacer from '../components/Spacer'
 import Banner from '../components/Banner'
 import { FiSearch } from 'react-icons/fi';
 import Video from '../components/Video'
+import { getUser } from '../../models/User'
 
 function HomePage() {
     return (
         <div className="container">
 
-            <Banner pretitle={"Hello user 👋"} title={"LonDe"} subtitle={"From Zero to Hero"}>
+            <Banner pretitle={`Welcome ${getUser().name} 👋`} title={"LonDe"} subtitle={"From Zero to Hero"}>
                 <FiSearch></FiSearch>
             </Banner>
 

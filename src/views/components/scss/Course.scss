@@ -1,5 +1,5 @@
 .course {
-    width: 290px;
+    width: 280px;
     display: flex;
     flex-direction: column;
     justify-content: stretch;
@@ -9,6 +9,7 @@
     padding: 30px 10px 10px 10px;
 
     margin-right: 20px;
+    margin-bottom: 20px;
     transition: .3s;
 
     border: 1px solid #333;
@@ -19,7 +20,7 @@
     }
 
     &-thumb {
-        width: 250px;
+        width: 240px;
         height: 150px;
         background-color: #ddd;
         border-radius: 10px;

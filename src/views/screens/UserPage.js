@@ -7,17 +7,25 @@ import Spacer from '../components/Spacer';
 import AskBox from '../components/AskBox';
 import Switch from '../components/Switch';
 import Course from '../components/Course';
+import { getUser } from '../../models/User'
+import Button from '../components/Button';
+import { useNavigate } from "react-router-dom"
+import { logOut } from '../../controls/Authenticate'
 
 function UserPage() {
+
+    const user = getUser()
+    const navigator = useNavigate()
+
     return (
         <div className="container">
 
             <div className='container-flex'>
                 <div className='userinfo'>
-                    <img src='https://cdn.baogiaothong.vn/upload/images/2020-4/article_img/2020-10-26/tranducbo03-88ff3fc1-1603704911-width720height960-auto-crop.jpg' className='userinfo-avatar' alt=''></img>
+                    <img src={user.photoUrl} className='userinfo-avatar' alt=''></img>
                     <div className='userinfo-content'>
-                        <div className='userinfo-content-name'>Tên người dùng</div>
-                        <div className='userinfo-content-email'>email người dùng</div>
+                        <div className='userinfo-content-name'>{user.name}</div>
+                        <div className='userinfo-content-email'>{user.email}</div>
                     </div>
                 </div>
                 <UnitCard icon={<BsCoin></BsCoin>} title={"Coin"} amount={"100"}></UnitCard>
@@ -40,6 +48,16 @@ function UserPage() {
                 <Course title={"Custom 2"}></Course>
                 <Course title={"Custom 3"}></Course>
             </div>
+
+            <Spacer space={80}></Spacer>
+
+            <AskBox heading={"Sign out"}>
+                <Button press={async () => {
+                    await logOut()
+                    navigator('/')
+                }}>Sign out</Button>
+            </AskBox>
+
 
         </div>
     )

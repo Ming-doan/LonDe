@@ -1,0 +1,27 @@
+.frame {
+    display: flex;
+    overflow: hidden;
+}
+
+.navbar {
+    position: fixed;
+    inset: 0 auto 0 0;
+}
+
+.content {
+    margin-left: 80px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.sidebar {
+    position: fixed;
+    inset: 0 0 0 auto;
+    width: 300px;
+    height: 100vh;
+    border-left: 1px solid #333;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    box-sizing: border-box;
+}
