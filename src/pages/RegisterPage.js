@@ -5,7 +5,6 @@ import { AiFillEyeInvisible, AiFillEye } from 'react-icons/ai';
 import { useState } from "react";
 import { signIn, authChecker } from '../controls/Authenticate'
 import { useNavigate } from "react-router-dom"
-import { getUser } from '../models/User'
 
 let emailInput = ""
 let passwordInput = ""
@@ -44,7 +43,9 @@ function RegisterPage() {
 
                 <Button press={async () => {
                     await signIn(emailInput, passwordInput)
-                    navigator('/app')
+                    if (authChecker()) {
+                        navigator('/app')
+                    }
                 }}>Sign In</Button>
             </div>
         </div>
