@@ -1,9 +1,9 @@
 import './scss/Video.scss'
 import { GrFormAdd } from 'react-icons/gr'
 
-function Video({ title, des, tag }) {
+function Video({ title, des, tag, press }) {
     return (
-        <div className="video">
+        <div className="video" onClick={press}>
             <div className="video-thumb"></div>
             <div className="video-title">{title}</div>
             <div className="video-description">{des}</div>

@@ -24,7 +24,9 @@ function HomePage() {
 
             <div className='category'>Recommend for you</div>
             <div className='video-container'>
-                <Video title={"Video name"} des={"Description"} tag={"Tag"}></Video>
+                <Video title={"Video name"} des={"Description"} tag={"Tag"} press={() => { console.log(123) }}></Video>
+                <Video title={"Video name"} des={"Description"} tag={"Tag"} press={() => { console.log(123) }}></Video>
+                <Video title={"Video name"} des={"Description"} tag={"Tag"} press={() => { console.log(123) }}></Video>
             </div>
         </div>
     )

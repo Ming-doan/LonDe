@@ -2,7 +2,7 @@ import './scss/Button.scss'
 
 function Button({ children, press }) {
     return (
-        <div className="button" onClick={press()}>{children}</div>
+        <div className="button" onClick={press}>{children}</div>
     )
 }
 
