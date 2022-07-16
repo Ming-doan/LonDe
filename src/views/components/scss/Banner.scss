@@ -1,0 +1,19 @@
+.banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.title {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.subtitle {
+    font-size: 20px;
+}
+
+.banner-right {
+    font-size: 24px;
+    cursor: pointer;
+}

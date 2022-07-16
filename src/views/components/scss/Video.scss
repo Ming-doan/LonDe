@@ -1,0 +1,41 @@
+.video {
+    width: 250px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+
+    &-thumb {
+        width: 100%;
+        height: 150px;
+        background-color: #999;
+        border-radius: 10px;
+    }
+
+    &-title {
+        padding: 10px;
+    }
+
+    &-description {
+        padding: 0 0 10px 10px;
+    }
+
+    &-nav {
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &-tag {
+        width: 35px;
+        height: 20px;
+        border-radius: 10px;
+        background-color: #ccc;
+        font-size: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
