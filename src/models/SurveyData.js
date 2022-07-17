@@ -1,19 +1,31 @@
 let surveyData = [
     {
-        title: "How old are you?",
-        options: ["14 - 18", "18 - 24", '24 - 35', '35 - 45', '45 - 60', 'over 60']
+        title: "Evaluate your following skills: Sales and Marketing",
+        options: ["Basic", "Foundational", 'Intermediate', 'Advanced', 'Expert']
     },
     {
-        title: "How old are you?",
-        options: ["14 - 18", "18 - 24", '24 - 35', '35 - 45', '45 - 60', 'over 60']
+        title: "Evaluate your following skills: Customer and Personal Service",
+        options: ["Basic", "Foundational", 'Intermediate', 'Advanced', 'Expert']
     },
     {
-        title: "How old are you?",
-        options: ["14 - 18", "18 - 24", '24 - 35', '35 - 45', '45 - 60', 'over 60']
+        title: "Evaluate your following skills: English Language",
+        options: ["Basic", "Foundational", 'Intermediate', 'Advanced', 'Expert']
     },
     {
-        title: "How old are you?",
-        options: ["14 - 18", "18 - 24", '24 - 35', '35 - 45', '45 - 60', 'over 60']
+        title: "Evaluate your following skills: Administration and Management",
+        options: ["Basic", "Foundational", 'Intermediate', 'Advanced', 'Expert']
+    },
+    {
+        title: "Evaluate your following skills: Computers and Electronics",
+        options: ["Basic", "Foundational", 'Intermediate', 'Advanced', 'Expert']
+    },
+    {
+        title: "Evaluate your following skills: Critical Thinking",
+        options: ["Basic", "Foundational", 'Intermediate', 'Advanced', 'Expert']
+    },
+    {
+        title: "Evaluate your following skills: Negotiation",
+        options: ["Basic", "Foundational", 'Intermediate', 'Advanced', 'Expert']
     },
 ]
 
