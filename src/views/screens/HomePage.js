@@ -27,11 +27,11 @@ function HomePage() {
 
             <Spacer space={40}></Spacer>
 
-            <div className='category'>Recommend for you</div>
+            <div className='category'>You may interested</div>
             <div className='video-container'>
-                <Video title={"Video name"} des={"Description"} tag={"Tag"} press={() => { console.log(123) }}></Video>
-                <Video title={"Video name"} des={"Description"} tag={"Tag"} press={() => { console.log(123) }}></Video>
-                <Video title={"Video name"} des={"Description"} tag={"Tag"} press={() => { console.log(123) }}></Video>
+                <Video title={"Làm quen với Adobe Illustrator 2020"} des={"THAM GIA CỘNG ĐỒNG CÙNG UYÊN NHÉ!"} tag={"Illustrator"} link={'aQMopS2idcc'} press={() => { console.log(123) }}></Video>
+                <Video title={"How to Shoot CINEMATIC VIDEO with your iPhone"} des={"In this video I will show you how to shoot cinematic video with your iPhone."} tag={"Film"} link={'SPrFjbadxI4'} press={() => { console.log(123) }}></Video>
+                <Video title={"Create the \Instagram Skin\" in Photoshop!"} des={"Learn to Create the Popular Instagram Style Skin Retouching with Photoshop!"} tag={"Color Grading"} link={'f2bQ3I5tnoc'} press={() => { console.log(123) }}></Video>
             </div>
         </div>
     )

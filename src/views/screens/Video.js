@@ -7,7 +7,7 @@ import './scss/Video.scss'
 import { useRef, memo } from 'react'
 import YouTube from 'react-youtube'
 
-function Video({ detectPlaying, detectPause }) {
+function Video({ detectPlaying, detectPause, url }) {
     const iframeRef = useRef()
 
     return (
@@ -21,7 +21,7 @@ function Video({ detectPlaying, detectPause }) {
 
                 <YouTube
                     className='embed-video-youtube'
-                    videoId='zRdHnseM0PE'
+                    videoId={`${url}`}
                     onPlay={() => detectPlaying()}
                     onPause={() => detectPause()}
                 ></YouTube>

@@ -22,10 +22,16 @@
 
     &-title {
         padding: 10px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
     }
 
     &-description {
         padding: 0 0 10px 10px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
     }
 
     &-nav {
@@ -37,7 +43,7 @@
     }
 
     &-tag {
-        width: 35px;
+        // width: 35px;
         height: 20px;
         border-radius: 10px;
         background-color: #ccc;
@@ -45,6 +51,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        padding: 0 5px;
     }
 
     &-options {

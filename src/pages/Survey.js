@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { getSurveyData, appendResult, getResult } from '../models/SurveyData'
 import './scss/Survey.scss'
+import syncSurvey from '../controls/UpdateSurvey'
 
 function Survey() {
     const [index, setIndex] = useState(0)
@@ -15,7 +16,7 @@ function Survey() {
             setIndex(index + 1)
         } else {
             appendResult(survey[index].title, option)
-            console.log(getResult())
+            syncSurvey(getResult())
             navigator(-1)
 
         }
