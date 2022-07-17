@@ -10,6 +10,7 @@ import App from './pages/App';
 import VideoListPage from './pages/VideoListPage';
 import VideoPage from './pages/VideoPage';
 import RegisterPage from './pages/RegisterPage';
+import Survey from './pages/Survey';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -21,7 +22,7 @@ root.render(
         <Route path='/app' element={<App />}></Route>
         <Route path='/list' element={<VideoListPage />}></Route>
         <Route path='/video' element={<VideoPage />}></Route>
-
+        <Route path='/survey' element={<Survey />}></Route>
       </Routes>
     </Router>
   </React.StrictMode>

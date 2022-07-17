@@ -4,8 +4,6 @@ import { database } from '../firebase-config'
 import { auth } from '../firebase-config'
 import { updateUser, getUser } from '../models/User'
 
-import { useNavigate } from "react-router-dom"
-
 
 function getUserInfo(userId, updateData) {
     const collectionRef = collection(database, 'users')

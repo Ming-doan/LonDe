@@ -6,8 +6,11 @@ import Banner from '../components/Banner'
 import { FiSearch } from 'react-icons/fi';
 import Video from '../components/Video'
 import { getUser } from '../../models/User'
+import { useNavigate } from 'react-router-dom'
 
 function HomePage() {
+
+    const navigator = useNavigate()
     return (
         <div className="container">
 
@@ -18,7 +21,9 @@ function HomePage() {
             <Spacer space={40}></Spacer>
 
             <AskBox heading={"Take the survey now!"} subheading={"Take this survey to enhance your experiment"}>
-                <Button press={() => { }}> Take now</Button>
+                <Button press={() => {
+                    navigator('/survey')
+                }}> Take now</Button>
             </AskBox>
 
             <Spacer space={40}></Spacer>

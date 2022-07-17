@@ -1,0 +1,28 @@
+.survey {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+
+    &-title {
+        font-size: 40px;
+        margin-bottom: 40px;
+    }
+
+    &-content {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 20vw;
+    }
+
+    &-option {
+        padding: 10px 20px;
+        border-radius: 10px;
+        border: 1px solid #333;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        cursor: pointer;
+    }
+}

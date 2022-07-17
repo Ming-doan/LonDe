@@ -4,8 +4,12 @@ import Button from '../components/Button'
 import Spacer from '../components/Spacer'
 import './scss/Frame.scss'
 import './scss/Video.scss'
+import { useRef, memo } from 'react'
+import YouTube from 'react-youtube'
 
-function Video() {
+function Video({ detectPlaying, detectPause }) {
+    const iframeRef = useRef()
+
     return (
         <div className="container">
 
@@ -14,17 +18,25 @@ function Video() {
             <Spacer space={20}></Spacer>
 
             <div className='embed-video'>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/zRdHnseM0PE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                <YouTube
+                    className='embed-video-youtube'
+                    videoId='zRdHnseM0PE'
+                    onPlay={() => detectPlaying()}
+                    onPause={() => detectPause()}
+                ></YouTube>
             </div>
 
             <Spacer space={20}></Spacer>
 
             <AskBox heading={"Take note at"}>
-                <Button press={() => { }}>Add note</Button>
+                <Button press={() => {
+                    console.log(iframeRef.current)
+                }}>Add note</Button>
             </AskBox>
 
         </div>
     )
 }
 
-export default Video
+export default memo(Video)

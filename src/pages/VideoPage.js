@@ -1,4 +1,6 @@
+import { useEffect, useState } from 'react';
 import Button from '../views/components/Button';
+import Coin from '../views/components/Coin';
 import NavBar from '../views/components/NavBar2';
 import Spacer from '../views/components/Spacer';
 import VideoTask from '../views/components/VideoTask';
@@ -6,16 +8,22 @@ import Video from '../views/screens/Video';
 import './scss/App.css';
 
 function VideoPage() {
+    const [isplaying, setPlaying] = useState(false)
+
+    function handleUpdate() {
+        setPlaying(!isplaying)
+    }
+
     return (
         <div className='frame'>
             <div className='navbar'>
                 <NavBar></NavBar>
             </div>
             <div className='content' style={{ marginRight: '300px' }}>
-                <Video></Video>
+                <Video detectPlaying={handleUpdate} detectPause={handleUpdate}></Video>
             </div>
             <div className='sidebar'>
-                <p>You just spend <b>0.12</b> Coins</p>
+                <Coin isplaying={isplaying}></Coin>
                 <Spacer space={20}></Spacer>
                 <div style={{ display: 'flex', flexDirection: 'column', flex: '1' }}>
                     <VideoTask name={"Video 1"} isCompleted></VideoTask>

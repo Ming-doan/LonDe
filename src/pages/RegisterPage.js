@@ -43,7 +43,9 @@ function RegisterPage() {
 
                 <Button press={async () => {
                     await signIn(emailInput, passwordInput)
+                    console.log(authChecker())
                     if (authChecker()) {
+
                         navigator('/app')
                     }
                 }}>Sign In</Button>
