@@ -5,12 +5,12 @@ import { auth } from '../firebase-config'
 import { updateUser, getUser } from '../models/User'
 
 
-function getUserInfo(userId, updateData) {
+export function getUserInfo(userId, updateData) {
     const collectionRef = collection(database, 'users')
     const querySnapshot = query(collectionRef, where("userid", "==", userId))
     onSnapshot(querySnapshot, (snapshot) => {
-        console.log(snapshot.docs[0])
         updateData(snapshot.docs[0].data())
+        return snapshot.docs[0].id
     })
 }
 

@@ -44,9 +44,8 @@ function UserPage() {
             <div className='category'>Your courses</div>
 
             <div className='video-container'>
-                <Course title={"Custom 1"}></Course>
-                <Course title={"Custom 2"}></Course>
-                <Course title={"Custom 3"}></Course>
+                <Course title={"Illustrtor"} courses={['aQMopS2idcc', 'SFh7OvTT8ZM', 'bKD2m33LqXs', 'lnmpiWPaS8U']}></Course>
+                <Course title={"Flutter"} courses={['1ukSR1GRtMU', 'bKueYVtV0eA', 'FLQ-Vhw1NYQ', 'TSIhiZ5jRB0']}></Course>
             </div>
 
             <Spacer space={80}></Spacer>

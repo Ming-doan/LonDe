@@ -6,9 +6,14 @@ import Spacer from '../views/components/Spacer';
 import VideoTask from '../views/components/VideoTask';
 import Video from '../views/screens/Video';
 import './scss/App.css';
+import { getCurrentVideo } from '../controls/CurrentVideo'
+import { getCurrentList } from '../controls/CurrentList'
 
 function VideoPage() {
     const [isplaying, setPlaying] = useState(false)
+
+    const video = getCurrentVideo()
+    const videoList = getCurrentList()
 
     function handleUpdate() {
         setPlaying(!isplaying)
@@ -20,15 +25,15 @@ function VideoPage() {
                 <NavBar></NavBar>
             </div>
             <div className='content' style={{ marginRight: '300px' }}>
-                <Video detectPlaying={handleUpdate} detectPause={handleUpdate}></Video>
+                <Video detectPlaying={handleUpdate} detectPause={handleUpdate} url={video}></Video>
             </div>
             <div className='sidebar'>
                 <Coin isplaying={isplaying}></Coin>
                 <Spacer space={20}></Spacer>
                 <div style={{ display: 'flex', flexDirection: 'column', flex: '1' }}>
-                    <VideoTask name={"Video 1"} isCompleted></VideoTask>
-                    <VideoTask name={"Video 2"} isCompleted></VideoTask>
-                    <VideoTask name={"Video 3"} ></VideoTask>
+                    {videoList.map((list, index) => {
+                        return <VideoTask name={`Video ${index + 1}`} ></VideoTask>
+                    })}
                 </div>
                 <div className='container-flex'>
                     <Button press={() => { }}>Previous</Button>

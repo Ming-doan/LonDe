@@ -3,8 +3,12 @@ import Button from '../components/Button'
 import Spacer from '../components/Spacer'
 import Video from '../components/Video'
 import './scss/Frame.scss'
+import { useNavigate } from 'react-router-dom'
+import { setCurrentVideo } from '../../controls/CurrentVideo'
 
-function VideoList() {
+function VideoList({ list }) {
+
+    const navigator = useNavigate()
     return (
         <div className="container">
 
@@ -15,10 +19,14 @@ function VideoList() {
             <Spacer space={80}></Spacer>
 
             <div className='video-container'>
-                <Video title={"Video 1"} des={"Description"} tag={"Tag"} press={() => { }}></Video>
-                <Video title={"Video 1"} des={"Description"} tag={"Tag"} press={() => { }}></Video>
-                <Video title={"Video 1"} des={"Description"} tag={"Tag"} press={() => { }}></Video>
-                <Video title={"Video 1"} des={"Description"} tag={"Tag"} press={() => { }}></Video>
+                {
+                    list.map((item, index) => {
+                        return <Video title={`Course ${index}`} des={"Description"} tag={"Tag"} link={item} press={() => {
+                            setCurrentVideo(item)
+                            navigator('/video')
+                        }}></Video>
+                    })
+                }
             </div>
 
         </div>
