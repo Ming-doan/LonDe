@@ -28,9 +28,9 @@ function UserPage() {
                         <div className='userinfo-content-email'>{user.email}</div>
                     </div>
                 </div>
-                <UnitCard icon={<BsCoin></BsCoin>} title={"Coin"} amount={"100"}></UnitCard>
+                <UnitCard icon={<BsCoin></BsCoin>} title={"Coin"} amount={user.coin}></UnitCard>
                 <Spacer space={20}></Spacer>
-                <UnitCard icon={<GiElectric></GiElectric>} title={"Energy"} amount={"50"}></UnitCard>
+                <UnitCard icon={<GiElectric></GiElectric>} title={"Energy"} amount={user.energy}></UnitCard>
             </div>
 
             <Spacer space={40}></Spacer>

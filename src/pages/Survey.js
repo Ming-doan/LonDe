@@ -14,8 +14,10 @@ function Survey() {
             appendResult(survey[index].title, option)
             setIndex(index + 1)
         } else {
+            appendResult(survey[index].title, option)
             console.log(getResult())
-            navigator('/app')
+            navigator(-1)
+
         }
     }
 

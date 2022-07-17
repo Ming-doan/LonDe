@@ -9,6 +9,7 @@ function getUserInfo(userId, updateData) {
     const collectionRef = collection(database, 'users')
     const querySnapshot = query(collectionRef, where("userid", "==", userId))
     onSnapshot(querySnapshot, (snapshot) => {
+        console.log(snapshot.docs[0])
         updateData(snapshot.docs[0].data())
     })
 }
@@ -17,7 +18,7 @@ export async function signIn(email, password) {
     try {
         const user = await signInWithEmailAndPassword(auth, email, password)
         getUserInfo(user.user.uid, (userInfo) => {
-            updateUser(user.user.uid, userInfo.name, user.user.email, userInfo.photoUrl)
+            updateUser(user.user.uid, userInfo.name, user.user.email, userInfo.photoUrl, userInfo.coin, userInfo.energy)
         })
         console.log(user, getUser())
     } catch (e) {
